@@ -39,6 +39,11 @@ export class LivroService {
     return this.http.put<Livro>(`${this.baseUrl}reservar/${id}`, dado);
   }
 
+  delete(id: string): Observable<Livro> {
+    const url = `${this.baseUrl}acervo/${id}`;
+    return this.http.delete<Livro>(url);
+  }
+
   /* upload(files: Set<File>, url: string) {
 
     const formData = new FormData();

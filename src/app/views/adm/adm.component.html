@@ -14,12 +14,25 @@
                     <thead>
                         <tr>
                             <th *ngFor="let column of colunas">{{column}}</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor = "let livro of livros | filter:searchText">
                             <td *ngFor = "let column of colunas">
                                 {{livro[column]}}
+                            </td>
+                            <td class="acoes">
+                                <a type="button" class="btn btn-info mr-3" (click)="alterarLivro(livro)">
+                                    <i class="material-icons">
+                                        edit
+                                    </i>
+                                </a>
+                                <a type="button" class="btn btn-danger" (click)="deletarLivro(livro)">
+                                    <i class="material-icons">
+                                        delete
+                                    </i>
+                                </a>
                             </td>
                             <td *ngIf="livro.emprestado === true">
                                 <button class="btn btn-info" (click)="devolver(livro)">Devolução</button>
