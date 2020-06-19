@@ -58,10 +58,6 @@ export class AdmComponent implements OnInit {
     );
   }
 
-  alterarLivro(livro: Livro) {
-    console.log(livro.titulo);
-  }
-
   deletarLivro(livro: Livro) {
     if (confirm('Deseja remover o livro "' + livro.titulo + '"?')) {
       this.livroService.delete(livro._id).subscribe(data => {

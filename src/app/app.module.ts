@@ -25,6 +25,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AdicionarLivroComponent } from './views/adicionar-livro/adicionar-livro.component';
+import { AtualizarLivroComponent } from './views/atualizar-livro/atualizar-livro.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AdicionarLivroComponent } from './views/adicionar-livro/adicionar-livro
     AdmComponent,
     AcervoComponent,
     LivroComponent,
-    AdicionarLivroComponent
+    AdicionarLivroComponent,
+    AtualizarLivroComponent
   ],
   imports: [
     BrowserModule,

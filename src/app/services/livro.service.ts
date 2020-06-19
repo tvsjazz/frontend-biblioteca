@@ -35,6 +35,11 @@ export class LivroService {
     return this.http.get<Livro[]>(this.baseUrl + 'acervo');
   }
 
+  readById(id: string): Observable<Livro> {
+    const url = `${this.baseUrl}acervo/${id}`;
+    return this.http.get<Livro>(url);
+  }
+
   update(id: string, dado: Livro): Observable<Livro> {
     return this.http.put<Livro>(`${this.baseUrl}reservar/${id}`, dado);
   }

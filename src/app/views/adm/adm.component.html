@@ -23,7 +23,7 @@
                                 {{livro[column]}}
                             </td>
                             <td class="acoes">
-                                <a type="button" class="btn btn-info mr-3" (click)="alterarLivro(livro)">
+                                <a type="button" class="btn btn-info mr-3" routerLink="/atualizar-livro/{{ livro._id }}">
                                     <i class="material-icons">
                                         edit
                                     </i>

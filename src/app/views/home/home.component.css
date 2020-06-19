@@ -17,3 +17,26 @@
     width: 15rem;
     height: 10rem;
 }
+
+@media only screen and (max-width: 425px) {
+
+    .titulo {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .botoes {
+        display: block;
+        margin: 10px 30px 10px 30px;
+    }
+
+    .adm {
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    .acervo {
+        margin: auto;
+    }
+
+  }
