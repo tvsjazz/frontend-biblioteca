@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row search">
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="searchText" name="search" autocomplete="off">
         </form>
@@ -46,7 +46,7 @@
             <div class="row descricao">
                 <p>Descrição: {{ livroSelecionado.descricao }}</p>
             </div>
-            <div class="reservar col-md-6">
+            <div *ngIf="livroSelecionado.reservado === false; else livroReservado" class="reservar col-md-6">
                 <div class="input-group mb-3">
                     <input [(ngModel)]="livroSelecionado.nomeReserva" type="text" class="form-control" placeholder="Digite seu nome">
                     <div class="input-group-append">
@@ -54,9 +54,17 @@
                     </div>
                 </div>
             </div>
+            <ng-template #livroReservado>
+                <p class="p-3 mb-2 text-white bg-info rounded col-md-6 text-center">LIVRO RESERVADO</p>
+            </ng-template>
+            
         </div>
 
-        <ng-template #semLivro>Sem livro</ng-template>
+            <ng-template #semLivro>
+                <div class="sem-capa">
+                    <img style="height: 500px;" src="../../../assets/semlivro.jpg" alt="sem-livro">
+                </div>
+            </ng-template>
         
 
     </div>

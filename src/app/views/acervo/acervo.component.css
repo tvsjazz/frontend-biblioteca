@@ -11,7 +11,7 @@ table {
 }
 
 .livro {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .info {
@@ -34,3 +34,20 @@ table {
 .mat-row:nth-child(odd){
     background-color: lightgray;
     }
+
+.sem-capa {
+    margin-left: 15px;
+}
+
+@media (max-width: 320px) {
+    
+    .search {
+        margin: auto; 
+    }
+    
+    .livro,
+    .sem-capa {
+      margin: auto;
+      margin-top: 15px;
+    }
+  }

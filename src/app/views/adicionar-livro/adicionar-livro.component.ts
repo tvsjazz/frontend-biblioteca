@@ -27,7 +27,7 @@ export class AdicionarLivroComponent implements OnInit {
     this.cadastrarForm = this.formBuilder.group({
       titulo: [null, [Validators.required]],
       autor: [null, Validators.required],
-      paginas: [null, Validators.required],
+      paginas: [null, [Validators.required, Validators.pattern('^[0-9]*$')]],
       descricao: [null, Validators.required]
     });
   }

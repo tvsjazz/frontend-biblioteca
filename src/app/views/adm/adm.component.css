@@ -5,3 +5,18 @@ i {
 td.acoes {
     padding-right: 0;
 }
+
+@media (max-width: 320px) {
+    .topo {
+        padding: 20px;
+    }
+
+    .search {
+        margin: auto;
+    }
+
+    .adicionar {
+        margin: auto;
+    }
+
+}
